@@ -1,6 +1,6 @@
 # Deploy Your Slack AI Bot to Azure
 
-## 1. Introduction
+## 1. Introduction x
 
 Welcome to this tutorial on deploying your Python-based Slack bot to an Azure Web App! In the previous video, we built a Slack bot locally and tested it using ngrok. In this tutorial, we will take it a step further and deploy the bot to the cloud using Azure, allowing it to be accessible from anywhere. Although we are using Azure in this tutorial, you can achieve similar results using other cloud platforms, such as AWS or Google Cloud Platform.
 
