@@ -113,8 +113,8 @@ def handle_mentions(body, say):
 
     say("Sure, I'll get right on that!")
     # response = my_function(text)
-    # response = draft_email(text)
-    response = call_flowise(text)
+    response = draft_email(text)
+    # response = call_flowise(text)
     logging.info("Generated response: " + response.replace("\n", " "))
     say(response)
 
