@@ -11,6 +11,7 @@ import logging
 from functools import wraps
 import time
 import sys
+import requests
 
 # Configure the logging level and format
 logging.basicConfig(
@@ -112,7 +113,8 @@ def handle_mentions(body, say):
 
     say("Sure, I'll get right on that!")
     # response = my_function(text)
-    response = draft_email(text)
+    # response = draft_email(text)
+    response = call_flowise(text)
     logging.info("Generated response: " + response.replace("\n", " "))
     say(response)
 
