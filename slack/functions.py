@@ -52,7 +52,5 @@ def call_flowise (message):
         return response.json()
         
     return response = query({
-        "question": message",
+        "question": message,
     })
-
-    return response
