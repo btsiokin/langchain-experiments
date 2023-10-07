@@ -111,7 +111,7 @@ def handle_mentions(body, say):
     text = text.replace(mention, "").strip()
     logging.info("Received text: " + text.replace("\n", " "))
 
-    say("Sure, I'll get right on that!")
+    say("Sure, I'll get right on that! Github - btsiokin - coachinabox account")
     # response = my_function(text)
     response = draft_email(text)
     # response = call_flowise(text)
