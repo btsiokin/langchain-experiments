@@ -45,4 +45,5 @@ def Flowise_call(user_input, name="Dave"):
         "name": name
     }
     response = requests.post(API_URL, json=payload)
-    return response.json()
+    # return response.json()
+    return "OK"
