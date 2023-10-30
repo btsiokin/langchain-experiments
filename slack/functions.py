@@ -7,6 +7,8 @@ from langchain.prompts.chat import (
     HumanMessagePromptTemplate,
 )
 
+import requests
+
 API_URL = "https://flowise-bts.onrender.com/api/v1/prediction/f17241f5-92e4-4062-b5b2-ae46d99f9509"
 
 load_dotenv(find_dotenv())
@@ -35,29 +37,13 @@ def draft_email(user_input, name="Dave"):
     chain = LLMChain(llm=chat, prompt=chat_prompt)
     response = chain.run(user_input=user_input, signature=signature, name=name)
     
-    """
-    API_URL = "https://ai.btsmomenta.com/api/v1/prediction/80f44dc0-fc05-40dc-9ae3-974f38054eaa"
-
-    def query(payload):
-        response = ""
-        response = requests.post(API_URL, json=payload)
-        return response.json()
-        
-    response = query({"question": user_input})
-    """
-    
     return response
 
 
-def call_flowise(message):
-    """
-    API_URL = "https://ai.btsmomenta.com/api/v1/prediction/80f44dc0-fc05-40dc-9ae3-974f38054eaa"
-
-    def query(payload):
-        response = requests.post(API_URL, json=payload)
-        return response.json()
-        
-    return response = query({
-        "question": message,
-    })
-    """
+def Flowise_call(user_input, name="Dave"):
+    payload = {
+        "question": user_input,
+        "name": name
+    }
+    response = requests.post(API_URL, json=payload)
+    return response.json()
