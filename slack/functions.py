@@ -7,6 +7,8 @@ from langchain.prompts.chat import (
     HumanMessagePromptTemplate,
 )
 
+API_URL = "https://flowise-bts.onrender.com/api/v1/prediction/f17241f5-92e4-4062-b5b2-ae46d99f9509"
+
 load_dotenv(find_dotenv())
 
 def draft_email(user_input, name="Dave"):
