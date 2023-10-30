@@ -6,7 +6,7 @@ from slack_bolt.adapter.flask import SlackRequestHandler
 from slack_bolt import App
 from dotenv import find_dotenv, load_dotenv
 from flask import Flask, request, abort
-from functions import draft_email, call_flowise
+from functions import draft_email, Flowise_call
 import logging
 from functools import wraps
 import time
@@ -113,8 +113,9 @@ def handle_mentions(body, say):
 
     say("Sure, I'll get right on that! Github - btsjp")
     # response = my_function(text)
-    response = draft_email(text)
+    # response = draft_email(text)
     # response = call_flowise(text)
+    response = Flowise_call(text)
     logging.info("Generated response: " + response.replace("\n", " "))
     say(response)
 
