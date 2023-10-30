@@ -39,10 +39,9 @@ def draft_email(user_input, name="Dave"):
     return response
 
 
-def Flowise_call(user_input, name="Dave"):
+def Flowise_call(user_input):
     payload = {
-        "question": user_input,
-        "name": name
+        "question": user_input
     }
     response = requests.post(API_URL, json=payload)
     # return response.json()
