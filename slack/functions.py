@@ -8,7 +8,8 @@ from langchain.prompts.chat import (
     HumanMessagePromptTemplate,
 )
 
-API_URL = "https://flowise-bts.onrender.com/api/v1/prediction/f17241f5-92e4-4062-b5b2-ae46d99f9509"
+API_URL = "https://ai.btsmomenta.com/api/v1/prediction/80f44dc0-fc05-40dc-9ae3-974f38054eaa"
+# API_URL = "https://flowise-bts.onrender.com/api/v1/prediction/f17241f5-92e4-4062-b5b2-ae46d99f9509"
 
 load_dotenv(find_dotenv())
 
