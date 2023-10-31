@@ -1,3 +1,4 @@
+import requests
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
 from dotenv import find_dotenv, load_dotenv
@@ -39,10 +40,10 @@ def draft_email(user_input, name="Dave"):
     return response
 
 
-def Flowise_call(user_input):
+def flowise_call(user_input):
     payload = {
         "question": user_input
     }
-    # response = requests.post(API_URL, json=payload)
+    response = requests.post(API_URL, json=payload)
     # return response.json()
-    return "OK"
+    return "OK" + response.json()
