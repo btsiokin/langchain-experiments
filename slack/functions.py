@@ -46,5 +46,5 @@ def flowise_call(user_input):
         "question": user_input
     }
     response = requests.post(API_URL, json=payload)
-    return "OK" + str(response.status_code) + " - " + response.json().get("text") + " end"
+    return response.json().get("text")
     # return "OK" + str(response.status_code) + "'" + str(response.json()) + "'.end"
